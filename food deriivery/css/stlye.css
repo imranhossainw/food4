@@ -1,0 +1,562 @@
+/* ==============================front css sart ===================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ------------------------------front css end ---------------------- */
+/* ============================== common css sart ===================== */
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+ol,ul{
+  list-style: none;
+}
+h1,h2,h3,h4,h5,h6,p,a,ul,ol{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: #fff;
+}
+/* ------------------------------ common css end ---------------------- */
+/* ============================== root css sart ===================== */
+:root{
+  --Poppins:"Poppins", sans-serif;
+  --band_color:#EB5757;
+  --pramary_color:#333333;
+}
+/* ------------------------------ root css end ---------------------- */
+/* ============================== menu css sart ===================== */
+.main_menu ul li a{
+  font-size:14px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: var(--pramary_color) !important;
+  margin-left: 44px;
+  transition: all linear 0.3s;
+}
+.main_menu ul li a:hover{
+  color: var(--band_color) !important;
+}
+.main_menu ul li a span{
+  color: var(--band_color);
+}
+.menu_src{
+  background: transparent; 
+  border: 2px solid transparent;
+  border-radius: 25px;
+  transition: all linear 0.3s;
+}
+.menu_src:hover{
+  border-color: var(--band_color);
+}
+.menu_icon .menu_src .src_text{
+    outline: none;
+    border: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--Poppins);
+    color: var(--primary_color);
+    text-align: center;
+    visibility: hidden;
+    transition: all linear 0.3s;
+}
+.menu_src:hover .src_text{
+  visibility: visible;
+  width: 100px;
+  height: 30px;
+}
+.src_icon{
+  color: #000;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 5px;
+  transition: all linear 0.3s;
+}
+.menu_src:hover .src_icon{
+  border-color: var(--band_color);
+}
+.menu_icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+.menu_button a{
+  width: 120px;
+  height: 49px;
+  border-radius: 50px;
+  border: 1px solid var(--band_color);
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  transition: all linear 0.3s;
+  position: relative;
+  z-index: 1;
+}
+.menu_button a:hover{
+  color: #fff;
+}
+.menu_button a::after{
+  content: '';
+  width:100%;
+  height: 100%;
+  border-radius: 50px;
+  background: var(--band_color);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  z-index: -1;
+  transition: transform 0.3s ease-in-out;
+}
+.menu_button a:hover::after{
+  transform: scalex(1);
+}
+/* ------------------------------ menu css end ---------------------- */
+/* ============================== banner css sart ===================== */
+#banner{
+  background: url(../img/Screenshot\ 2024-04-19\ 194934.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding:20px 0 200px 0;
+}
+.banner_button_one a{
+  width: 204px;
+  height: 52px;
+  border-radius: 50px;
+  background: #FEE9DE;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: var(--band_color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 122px 0 50px;
+}
+.banner_head h1{
+  width: 594px;
+  font-size: 72px;
+  font-weight: 700;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+}
+.banner_head h1 span{
+  color: var(--band_color);
+}
+.banner_head p{
+  width: 470px;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+  margin: 25px 0 30px;
+}
+.banner_button{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+}
+.banner_button_two a{
+  width: 186px;
+  height: 68px;
+  border-radius: 50px;
+  border: 2px solid var(--band_color);
+  background: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all linear 0.3s;
+  position: relative;
+  z-index: 1;
+}
+.banner_button_two a:hover{
+  color: #fff;
+}
+.banner_button_two a::after{
+  content: '';
+  width:100%;
+  height: 100%;
+  border-radius: 50px;
+  background: var(--band_color);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: start;
+  z-index: -1;
+  transition: transform 0.3s ease-in-out;
+}
+.banner_button_two a:hover::after{
+  transform: scalex(1);
+}
+
+ .banner_button_wach{
+  outline: none;
+  border: none;
+  width: 50px;
+  height: 68px;
+  background: transparent;
+  border: 2px solid var(--band_color);
+  border-radius: 50px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  transition: all linear 0.2s;
+ }
+.banner_button_wach:hover{
+  visibility: visible;
+  width: 200px;
+  height: 50px;
+ }
+ .banner_button_wach a{
+ padding: 10px;
+ }
+ .banner_button_wach p{
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+  visibility: hidden;
+  transition: all linear 0.2s;
+ }
+ .banner_whach:hover .banner_button_wach p{
+  visibility: visible;
+ }
+.banner_img img{
+  margin-right: 52px;
+  position: relative;
+}
+.banner_button_img {
+  position: absolute;
+  right: 448px;
+  top: 698px;
+}
+/* ------------------------------ banner css end ---------------------- */
+/* ============================== delivery_partner css sart =========== */
+#delivery_partner{
+  padding-bottom: 120px;
+}
+.delivery_partner_head h3{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--Poppins);
+  color: var(--band_color);
+  text-align: center;
+}
+.delivery_partner_head h2{
+  width: 532px;
+  font-size: 45px;
+  font-weight: 700;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+  text-align: center;
+  margin: 20px auto;
+}
+.delivery{
+  width: 355px;
+  background: #FEE9DE;
+}
+.delivery .delivery_img{
+  height: 230px;
+  text-align: center;
+}
+.delivery .delivery_head h4{
+  font-size: 28px;
+  font-weight: 700;
+  font-family: var(--Poppins);
+  color: #000;
+  text-align: center;
+}
+.delivery .delivery_head p{
+  width: 307px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+  text-align: center;
+  margin: 0 auto;
+}
+/* ------------------------------ delivery_partner css end ------------ */
+/* ============================== OUR MENU css sart =================== */
+.our_menu_head h3{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--Poppins);
+  color: var(--band_color);
+}
+.our_menu_head h2{
+  width: 532px;
+  font-size: 45px;
+  font-weight: 700;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.nav-link {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: #000;
+}
+.nav {
+  --bs-nav-link-hover-color: #000;
+}
+.nav-pills .nav-link {
+  width: 254px;
+  height: 85px;
+  border-radius: 50px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color:  #f2f2f2;
+  background: url(../img/Frame\ 13.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.food_pizza{
+  width: 436px;
+  border-radius: 30px;
+  padding: 30px;
+  background: rgba(158, 149, 149, 0.7);
+}
+.food_pizza .pizza_img img{
+  width: 376px;
+  height: 325px;
+  border-radius: 30px;
+}
+.pizza_head h4{
+  font-size: 34px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: #fff;
+  margin: 30px 0;
+}
+.pizza_head p{
+  font-size: 34px;
+  font-weight: 700;
+  font-family: var(--Poppins);
+  color: #fff;
+}
+.pizza_head p span{
+  font-size: 24px;
+  color: #F2C94C;
+}
+.order_now a{
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: #fff;
+  margin-top: 30px;
+  transition: all linear 0.3s;
+}
+.order_now a:hover{
+  color: var(--band_color);
+}
+.swiper {
+  width:900px;
+  height: 100%;
+  padding-top: 55px;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  background: var(--band_color);
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+}
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset,25px);
+  color: #fff;
+}
+.swiper-button-prev {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset,25px);
+  color: #000;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background: #e0e0e0;
+}
+
+/* ------------------------------ OUR MENU css end -------------------- */
+/* ============================== about us css sart =================== */
+#about_us{
+  padding: 105px 0 149px;
+}
+.about_img_head{
+  position: relative;
+}
+.our_review{
+  width: 263px;
+  height: 163px;
+  border-radius: 20px;
+  background: #fff;
+  padding: 25px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.our_review_head{
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--Poppins);
+  color: #000;
+}
+.review_img{
+  position: absolute;
+  top: 59px;
+  left: 25px;
+}
+.review_img_2{
+  left: 66px;
+}
+.review_img_3{
+  left: 105px;
+}
+.counter_head{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--band_color);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--Poppins);
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 59px;
+  left: 145px;
+}
+.about_head h3{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--Poppins);
+  color: var(--band_color);
+  margin: 187px 0 12px;
+}
+.about_head h2{
+  width: 532px;
+  font-size: 45px;
+  font-weight: 700;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+}
+.about_head p{
+  width: 505px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+  margin: 23px 0 30px;
+}
+.customer a{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.customer_img{
+  width: 64px;
+  height: 64px;
+}
+.customer_head h4{
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+}
+.customer_head p{
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: #828282;
+}
+.our_rating ul{
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.our_rating ul li a{
+  color: #F2C94C;
+}
+.our_rating ul li{
+  font-size: 15px;
+  font-weight: 500;
+  font-family:var(--Poppins);
+  color: #000;
+}
+/* ------------------------------ about us css end -------------------- */
+/* ============================== footer css sart ===================== */
+footer{
+  padding-bottom: 150px;
+}
+.footer_img{
+  width: 145px;
+  height: 45px;
+}
+.footer_text p{
+  width: 285px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+  margin: 32px 0 44px;
+}
+.footer_icon ul{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-left: 25px;
+}
+.footer_icon ul li a{
+  color: var(--band_color);
+}
+.footer_common_head h2{
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--Poppins);
+  color: #000;
+  margin-bottom: 25px;
+}
+.footer_common_content ul li a{
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--Poppins);
+  color: var(--pramary_color);
+  margin-bottom: 12px;
+}
+/* ------------------------------ footer css end ---------------------- */
